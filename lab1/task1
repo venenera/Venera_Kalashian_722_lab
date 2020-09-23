@@ -1,0 +1,21 @@
+using System;
+
+namespace Задача1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Нахождение площади и периметра прямоугольника");
+            Console.WriteLine("Введите длину прямоугольника, затем нажмите enter");
+            int a = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Введите ширину прямоугольника, затем нажмите enter");
+            int b = Convert.ToInt32(Console.ReadLine());
+            int S = a * b;
+            int P = 2 * (a + b);
+            Console.WriteLine("Площадь прямоугольника равна " + S);
+            Console.WriteLine("Периметр прямоугольника равен " + P);
+            Console.ReadKey();
+        }
+    }
+}

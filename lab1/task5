@@ -1,0 +1,18 @@
+using System;
+
+namespace Задача5
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Введите два ненулевых числа через enter");
+            int a = Convert.ToInt32(Console.ReadLine());
+            int b = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine($"Сумма модулей чисел {a} и {b} равна {Math.Abs(a) + Math.Abs(b)}");
+            Console.WriteLine($"Разность модулей чисел {a} и {b} равна {Math.Abs(a) - Math.Abs(b)}");
+            Console.WriteLine($"Произведение модулей чисел {a} и {b} равно {Math.Abs(a) * Math.Abs(b)}");
+            Console.WriteLine($"Частное модулей чисел {a} и {b} равно {Math.Abs((double)a) / Math.Abs(b)}");
+        }
+    }
+}

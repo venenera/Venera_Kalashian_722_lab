@@ -1,0 +1,18 @@
+using System;
+
+namespace Задача2
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            const double p = 3.14;
+            Console.WriteLine("Нахождение длины окружности");
+            Console.WriteLine("Введите диаметр окружности, затем нажмите enter");
+            int d = Convert.ToInt32(Console.ReadLine());
+            double L = d * p;
+            Console.WriteLine("Длина окружности равна " + L);
+            Console.ReadKey();
+        }
+    }
+}

@@ -1,0 +1,18 @@
+using System;
+
+namespace Задача4
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Введите два ненулевых числа через enter");
+            int a = Convert.ToInt32(Console.ReadLine());
+            int b = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine($"Сумма квадратов чисел {a} и {b} равна {Math.Pow(a, 2) + Math.Pow(b, 2)}");
+            Console.WriteLine($"Разность квадратов чисел {a} и {b} равна {Math.Pow(a, 2) - Math.Pow(b, 2)}");
+            Console.WriteLine($"Произведение модулей чисел {a} и {b} равно {Math.Pow(a, 2) * Math.Pow(b, 2)}");
+            Console.WriteLine($"Частное модулей чисел {a} и {b} равно {Math.Pow((double)a, 2) / Math.Pow(b, 2)}");
+        }
+    }
+}

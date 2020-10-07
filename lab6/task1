@@ -1,0 +1,19 @@
+using System;
+
+namespace lab2
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Нахождение расстояния между двумя точками с координатами (x1,y1) и (x2,y2) ");
+            Console.WriteLine("Введите координаты х1, y1, x2, y2 через enter соответственно ");
+            int x1 = Convert.ToInt32(Console.ReadLine());
+            int y1 = Convert.ToInt32(Console.ReadLine());
+            int x2 = Convert.ToInt32(Console.ReadLine());
+            int y2 = Convert.ToInt32(Console.ReadLine());
+            double S = Math.Sqrt(Math.Pow(x2 - x1, 2) + Math.Pow(y2 - y1, 2));
+            Console.WriteLine($"Расстояние между двумя точками равно {S}");
+        }
+    }
+}

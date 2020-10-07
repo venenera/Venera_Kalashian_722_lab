@@ -1,0 +1,19 @@
+using System;
+
+namespace задача3
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Введите точки A, B и С через enter соответственно ");
+            double A = Convert.ToDouble(Console.ReadLine());
+            double B = Convert.ToDouble(Console.ReadLine());
+            double C = Convert.ToDouble(Console.ReadLine());
+            double AC = Math.Abs(A - C);
+            double BC = Math.Abs(B - C);
+            double P = BC * AC;
+            Console.WriteLine($"Произведение отрезков AC и ВС равно {P}");
+        }
+    }
+}

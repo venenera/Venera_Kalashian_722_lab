@@ -1,0 +1,19 @@
+using System;
+
+namespace задача4
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Введите координаты х1, y1, x2, y2 через enter соответственно ");
+            double x1 = Convert.ToDouble(Console.ReadLine());
+            double y1 = Convert.ToDouble(Console.ReadLine());
+            double x2 = Convert.ToDouble(Console.ReadLine());
+            double y2 = Convert.ToDouble(Console.ReadLine());
+            double P = 2 * (Math.Abs(x1 - x2) + Math.Abs(y1 - y1));
+            double S = (Math.Abs(x1 - x2)) * (Math.Abs(y1 - y2));
+            Console.WriteLine($"Периметр прямоугольника равен {P}. Площадь прямоугольника равна {S}");
+        }
+    }
+}

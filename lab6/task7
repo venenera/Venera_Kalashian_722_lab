@@ -1,0 +1,19 @@
+using System;
+
+namespace task7
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Введите A");
+            double A = Convert.ToDouble(Console.ReadLine());
+            double B = A * A;
+            double C = B * A;
+            B = C * C;
+            C = C * B;
+            A = B * C;
+            Console.WriteLine($"A^15 = {A}"); 
+        }
+    }
+}

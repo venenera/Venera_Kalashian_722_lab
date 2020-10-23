@@ -1,0 +1,16 @@
+using System;
+
+namespace task4
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Нахождение значения функции y=3x^6-6x^2-7");
+            Console.WriteLine("Введите значение x");
+            double x = Convert.ToDouble(Console.ReadLine());
+            double y = 3 * x * x * x * x * x * x - 6 * x * x - 7;
+            Console.WriteLine($"y = {y}");
+        }
+    }
+}

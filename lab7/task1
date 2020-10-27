@@ -1,0 +1,15 @@
+using System;
+
+namespace lab8
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Введите значение угла в градусах");
+            double a = Convert.ToDouble(Console.ReadLine());
+            double a1 = a * Math.PI / 180;
+            Console.WriteLine($"{a}° = {a1} рад");
+        }
+    }
+}

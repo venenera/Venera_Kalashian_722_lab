@@ -1,0 +1,21 @@
+using System;
+
+namespace task4
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Введите скорость первого автомобиля");
+            double v1 = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("Введите скорость второго автомобиля");
+            double v2 = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("Введите время");
+            double T = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("Введите начальное расстояние между автомобилями");
+            double S = Convert.ToDouble(Console.ReadLine());
+            S = S + T*(v1 + v2);
+            Console.WriteLine($"Расстояние между автомобилям будет равно {S} км");
+        }
+    }
+}

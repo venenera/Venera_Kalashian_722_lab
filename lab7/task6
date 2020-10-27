@@ -1,0 +1,29 @@
+using System;
+
+namespace task6
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Решение системы линейных уравнений вида (1) A1*x + B1*y = C1; (2) A2*x + B2*y = C2");
+            Console.WriteLine("Введите A1");
+            double A1 = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("Введите B1");
+            double B1 = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("Введите C1");
+            double C1 = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("Введите A2");
+            double A2 = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("Введите B2");
+            double B2 = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("Введите C2");
+            double C2 = Convert.ToDouble(Console.ReadLine());
+            /*решение системы методом Крамера*/
+            double A = A1 * B2 - B1 * A2;
+            double Ax = C1 * B2 - B1 * C2;
+            double Ay = A1 * C2 - C1 * A2;
+            Console.WriteLine($"x = {Ax / A}, y = {Ay / A}");
+        }
+    }
+}

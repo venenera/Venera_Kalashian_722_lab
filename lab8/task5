@@ -1,0 +1,32 @@
+using System;
+
+namespace task5
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("Введите трёхзначное число a = ");
+
+            double a, remainder;
+            {
+                a = Convert.ToDouble(Console.ReadLine());
+
+                if (a > 99 & a < 1000)
+                {
+                    remainder = (a % 100) * 10;
+
+                    int b = (int)a / 100;
+
+                    a = b + remainder;
+
+                    Console.WriteLine($"a = {a}");
+                }
+                else
+                {
+                    Console.WriteLine("Введите ТРЁХЗНАЧНОЕ число");
+                }
+            }
+        }
+    }
+}

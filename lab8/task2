@@ -1,0 +1,35 @@
+using System;
+
+namespace task2
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int A, B;
+            {
+                Console.Write("Введите A = ");
+                A = Convert.ToInt32(Console.ReadLine());
+
+                Console.Write("Введите B = ");
+                B = Convert.ToInt32(Console.ReadLine());
+            }
+
+            int quantity;
+            {
+                bool AB = A > B;
+
+                if (AB)
+                {
+                    quantity = A / B;
+                    Console.WriteLine($"Количество отрезков длины {B}, расположенных на отрезке длины {A} равно {quantity}");
+                }
+
+                else
+                {
+                    Console.WriteLine("Не учтено условие А>В");
+                }
+            }
+        }
+    }
+}

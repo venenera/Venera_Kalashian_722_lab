@@ -1,0 +1,39 @@
+using System;
+
+namespace task4
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int A, B, C;
+            {
+                Console.Write("Введите A = ");
+                A = Convert.ToInt32(Console.ReadLine());
+
+                Console.Write("Введите B = ");
+                B = Convert.ToInt32(Console.ReadLine());
+
+                Console.Write("Введите C = ");
+                C = Convert.ToInt32(Console.ReadLine());
+            }
+
+            int S1, S2;
+            {
+                S1 = A * B;
+
+                S2 = C * C;
+            }
+
+            int quantity, remainder;
+            {
+                quantity = S1 / S2;
+
+                remainder = S1 % S2;
+
+                Console.Write($"Максимальное количество квадратов в - {quantity}" +
+                  $", незанятая площадь- {remainder}");
+            }
+        }
+    }
+}

@@ -1,0 +1,20 @@
+using System;
+
+namespace task5
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int year, century;
+            {
+                Console.Write("Введите год ");
+                year = Convert.ToInt32(Console.ReadLine());
+
+                century = (year - 1 / 100) + 1;
+
+                Console.Write($"{century}ое столетие");
+            }
+        }
+    }
+}

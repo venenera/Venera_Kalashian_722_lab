@@ -1,0 +1,41 @@
+using System;
+
+namespace task6
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int a, b, c;
+            {
+                Console.Write("Введите сторону a = ");
+                a = Convert.ToInt32(Console.ReadLine());
+
+                Console.Write("Введите сторону b = ");
+                b = Convert.ToInt32(Console.ReadLine());
+
+                Console.Write("Введите сторону c = ");
+                c = Convert.ToInt32(Console.ReadLine());
+            }
+
+            bool conditionA, conditionB, conditionC, condition;
+            {
+                conditionA = Math.Pow(b, 2) + Math.Pow(c, 2) == Math.Pow(a, 2);
+
+                conditionB = Math.Pow(a, 2) + Math.Pow(c, 2) == Math.Pow(b, 2);
+
+                conditionC = Math.Pow(b, 2) + Math.Pow(a, 2) == Math.Pow(c, 2);
+
+                condition = conditionA | conditionB | conditionC;
+            }    
+                if (condition)
+            {
+                Console.WriteLine("Высказвание  «Треугольник со сторонами a, b, c является прямоугольным» истинно");
+            }
+            else
+            {
+                Console.WriteLine("Высказвание  «Треугольник со сторонами a, b, c является прямоугольным» ложно");
+            }
+        }
+    }
+}

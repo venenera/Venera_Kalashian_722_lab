@@ -1,0 +1,40 @@
+using System;
+
+namespace ефыл5
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int A;
+            {
+                Console.Write("Введите треёхначное число А = ");
+                A = Convert.ToInt32(Console.ReadLine());
+            }
+
+            int num1, num2, num3, num4;
+            {
+                num4 = (A % 10)*1000;
+
+                num3 = ((A % 100) / 10)*100;
+
+                num2 = ((A / 100) % 10)*10;
+
+                num1 = A / 1000;
+            }
+
+            int sum = num1 + num2 + num3 + num4;
+
+            bool condition = sum == A;
+
+            if (condition)
+            {
+                Console.WriteLine("Высказвание «Данное число читается одинаково слева направо и справа налево» истинно");
+            }
+            else
+            {
+                Console.WriteLine("Высказвание «Данное число читается одинаково слева направо и справа налево» ложно");
+            }
+        }
+    }
+}

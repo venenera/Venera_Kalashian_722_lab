@@ -1,0 +1,30 @@
+using System;
+
+namespace lab10
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int A, B;
+            {
+                Console.Write("Введите А = ");
+                A = Convert.ToInt32(Console.ReadLine());
+
+                Console.Write("Введите B = ");
+                B = Convert.ToInt32(Console.ReadLine());
+            }
+
+            bool condition = A > 2 & B <= 3;
+
+            if (condition)
+            {
+                Console.WriteLine("Высказвание «Справедливы неравенства A > 2 и B ≤ 3» истинно");
+            }
+            else
+            {
+                Console.WriteLine("Высказвание «Справедливы неравенства A > 2 и B ≤ 3» ложно");
+            }
+        }
+    }
+}

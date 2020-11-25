@@ -1,0 +1,33 @@
+using System;
+
+namespace task2
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int A, B, C;
+            {
+                Console.Write("Введите А = ");
+                A = Convert.ToInt32(Console.ReadLine());
+
+                Console.Write("Введите B = ");
+                B = Convert.ToInt32(Console.ReadLine());
+
+                Console.Write("Введите C = ");
+                C = Convert.ToInt32(Console.ReadLine());
+            }
+
+            bool condition = A < B && B < C;
+
+            if (condition)
+            {
+                Console.WriteLine("Высказвание «Справедливо двойное неравенство A < B < C» истинно");
+            }
+            else
+            {
+                Console.WriteLine("Высказвание «Справедливо двойное неравенство A < B < C» ложно");
+            }
+        }
+    }
+}

@@ -1,0 +1,33 @@
+using System;
+
+namespace task7
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int a, b, c;
+            {
+                Console.Write("Введите сторону a = ");
+                a = Convert.ToInt32(Console.ReadLine());
+
+                Console.Write("Введите сторону b = ");
+                b = Convert.ToInt32(Console.ReadLine());
+
+                Console.Write("Введите сторону c = ");
+                c = Convert.ToInt32(Console.ReadLine());
+            }
+
+            bool condition = b + c > a && a + c > b && a + b > c;
+
+            if (condition)
+            {
+                Console.WriteLine("Высказвание «Существует треугольник со сторонами a, b, c» истинно");
+            }
+            else
+            {
+                Console.WriteLine("Высказвание «Существует треугольник со сторонами a, b, c» ложно");
+            }
+        }
+    }
+}

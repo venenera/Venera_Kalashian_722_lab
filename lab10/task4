@@ -1,0 +1,36 @@
+using System;
+
+namespace task4
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int A;
+            {
+                Console.Write("Введите треёхначное число А = ");
+                A = Convert.ToInt32(Console.ReadLine());
+            }
+
+            int num1, num2, num3;
+            {
+                num3 = A % 10;
+
+                num2 = (A / 10) % 10;
+
+                num1 = A / 100;
+            }
+
+            bool condition = (num1 < num2 & num2 < 3) | (num1 > num2 & num2 > num3);
+
+            if (condition)
+            {
+                Console.WriteLine("Высказвание «Цифры данного числа образуют возрастающую или убывающую последовательность» истинно");
+            }
+            else
+            {
+                Console.WriteLine("Высказвание «Цифры данного числа образуют возрастающую или убывающую последовательность» ложно");
+            }
+        }
+    }
+}

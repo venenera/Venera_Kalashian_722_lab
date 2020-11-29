@@ -1,0 +1,47 @@
+using System;
+
+namespace task5
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int A;
+            {
+                Console.Write("Введите число А = ");
+                A = Convert.ToInt32(Console.ReadLine());
+
+                bool conditionSign = A > 0, conditionParity = A % 2 == 0, conditionZero = A == 0;
+
+                string sign, parity;
+
+                if (conditionZero)
+                {
+                    Console.Write("нулевое число");
+                }
+                else
+                {
+                    if (conditionSign)
+                    {
+                        sign = "положительное";
+                    }
+                    else
+                    {
+                        sign = "отрицательное";
+                    }
+
+                    if (conditionParity)
+                    {
+                        parity = "чётное";
+                    }
+                    else
+                    {
+                        parity = "нечётное";
+                    }
+
+                    Console.Write($"{sign} {parity} число");
+                }
+            }
+        }
+    }
+}

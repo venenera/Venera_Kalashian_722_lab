@@ -1,0 +1,54 @@
+using System;
+
+namespace task6
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int A;
+            {
+                Console.Write("Введите число А = ");
+                A = Convert.ToInt32(Console.ReadLine());
+
+                bool conditionParity, conditionUno, conditionTwo;
+                {
+                    conditionParity = A % 2 == 0;
+
+                    conditionUno = A > 9;
+
+                    conditionTwo = A < 100;
+                }
+
+                string parity, digit;
+                 
+                if (conditionParity)
+                {
+                    parity = "чётное";
+                }
+                else
+                {
+                    parity = "нечётное";
+                }
+
+                if (conditionUno)
+                {
+                    if (conditionTwo)
+                    {
+                        digit = "двузначное";
+                    }
+                    else
+                    {
+                        digit = "трёхзначное";
+                    }
+                }
+                else
+                {
+                    digit = "однозначное";
+                }
+
+                Console.Write($"{parity} {digit} число");
+            }
+        }
+    }
+}

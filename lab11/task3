@@ -1,0 +1,51 @@
+using System;
+
+namespace task3
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int A, B, C;
+            {
+                Console.Write("Введите А = ");
+                A = Convert.ToInt32(Console.ReadLine());
+
+                Console.Write("Введите B = ");
+                B = Convert.ToInt32(Console.ReadLine());
+
+                Console.Write("Введите C = ");
+                C = Convert.ToInt32(Console.ReadLine());
+            }
+
+            int distanceB, distanceC;
+            {
+                distanceB = Math.Abs(B - A);
+
+                distanceC = Math.Abs(C - A);
+
+                bool condition = distanceB < distanceC;
+
+                int maxDistance = 0;
+                {
+                    string point;
+
+                    if (condition)
+                    {
+                        point = "B";
+
+                        maxDistance = distanceB;
+                    }
+                    else
+                    {
+                        point = "C";
+
+                        maxDistance = distanceC;
+                    }
+
+                    Console.Write($"Точка {point} ближе расположена к точка A, расстояние между ними - {maxDistance}");
+                }
+            }
+        }
+    }
+}

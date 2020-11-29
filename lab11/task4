@@ -1,0 +1,54 @@
+using System;
+
+namespace task4
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int x, y;
+            {
+                Console.Write("Введите координату x = ");
+                x = Convert.ToInt32(Console.ReadLine());
+
+                Console.Write("Введите координату y = ");
+                y = Convert.ToInt32(Console.ReadLine());
+            }
+
+            bool condX, condY;
+            {
+                condX = x > 0;
+
+                condY = y > 0;
+            }
+
+            int num = 0;
+
+            if (condX)
+            {
+                if (condY)
+                {
+                    num = 1;
+                }
+                else
+                {
+                    num = 2;
+                }
+            }
+            else
+            {
+                if (condY)
+                {
+                    num = 4;
+                }
+                else
+                {
+                    num = 3;
+                }
+            }
+
+            Console.Write($"Номер координатной четверти - {num}");
+
+        }
+    }
+}

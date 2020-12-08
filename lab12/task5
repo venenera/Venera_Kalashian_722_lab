@@ -1,0 +1,80 @@
+using System;
+
+namespace task5
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("");
+            string year = Console.ReadLine();
+            int N = Convert.ToInt32(year);
+
+            switch (N % 10)
+            {
+                case 0:
+                case 1:
+                    year = "бело";
+                    break;
+                case 2:
+                case 3:
+                    year = "чёрно";
+                    break;
+                case 4:
+                case 5:
+                    year = "зелёно";
+                    break;
+                case 6:
+                case 7:
+                    year = "красно";
+                    break;
+                case 8:
+                case 9:
+                    year = "жёлто";
+                    break;
+            }
+
+            switch ((N - 4) % 12)
+            {
+                case 0:
+                    year += "й крысы";
+                    break;
+                case 1:
+                    year += "й коровы";
+                    break;
+                case 2:
+                    year += "го тигра";
+                    break;
+                case 3:
+                    year += "го зайца";
+                    break;
+                case 4:
+                    year += "го дракона";
+                    break;
+                case 5:
+                    year += "й змеи";
+                    break;
+                case 6:
+                    year += "й лошади";
+                    break;
+                case 7:
+                    year += "й овцы";
+                    break;
+                case 8:
+                    year += "й обезьяны";
+                    break;
+                case 9:
+                    year += "й курицы";
+                    break;
+                case 10:
+                    year += "й собаки";
+                    break;
+                case 11:
+                    year += "й свиньи";
+                    break;
+            }
+
+            Console.Write(year);
+        }
+    }
+}

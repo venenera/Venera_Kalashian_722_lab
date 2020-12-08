@@ -1,0 +1,209 @@
+using System;
+
+namespace task1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int monthNum, dayNum;
+            {
+                Console.Write("Введите номер дня    - ");
+                dayNum = Convert.ToInt32(Console.ReadLine());
+
+                Console.Write("Введите номер месяца - ");
+                monthNum = Convert.ToInt32(Console.ReadLine());
+            }
+
+            string day = "", month = "";
+            {
+                switch (dayNum)
+                {
+                    case 1:
+                        day = "первое";
+                        break;
+
+                    case 2:
+                        day = "второе";
+                        break;
+
+                    case 3:
+                        day = "третье";
+                        break;
+
+                    case 4:
+                        day = "четвертое";
+                        break;
+
+                    case 5:
+                        day = "пятое";
+                        break;
+
+                    case 6:
+                        day = "шестое";
+                        break;
+
+                    case 7:
+                        day = "седьмое";
+                        break;
+
+                    case 8:
+                        day = "восьмое";
+                        break;
+
+                    case 9:
+                        day = "девятое";
+                        break;
+
+                    case 10:
+                        day = "десятое";
+                        break;
+
+                    case 11:
+                        day = "одиннадцатое";
+                        break;
+
+                    case 12:
+                        day = "двенадцатое";
+                        break;
+
+                    case 13:
+                        day = "тринадцатое";
+                        break;
+
+                    case 14:
+                        day = "четырнадцатое";
+                        break;
+
+                    case 15:
+                        day = "пятнадцатое";
+                        break;
+
+                    case 16:
+                        day = "шестнадцатое";
+                        break;
+
+                    case 17:
+                        day = "семнадцатое";
+                        break;
+
+                    case 18:
+                        day = "восемнадцатое";
+                        break;
+
+                    case 19:
+                        day = "девятнадцатое";
+                        break;
+
+                    case 20:
+                        day = "двадцатое";
+                        break;
+
+                    case 21:
+                        day = "двадцать первое";
+                        break;
+
+                    case 22:
+                        day = "двадцать второе";
+                        break;
+
+                    case 23:
+                        day = "двадцать третье";
+                        break;
+
+                    case 24:
+                        day = "двадцать четвертое";
+                        break;
+
+                    case 25:
+                        day = "двадцать пятое";
+                        break;
+
+                    case 26:
+                        day = "двадцать шестое";
+                        break;
+
+                    case 27:
+                        day = "двадцать седьмое";
+                        break;
+
+                    case 28:
+                        day = "двадцать восьмое";
+                        break;
+
+                    case 29:
+                        day = "двадцать девятое";
+                        break;
+
+                    case 30:
+                        day = "тридцатое";
+                        break;
+
+                    case 31:
+                        day = "тридцать первое";
+                        break;
+
+                    default:
+                        Console.Write("Неправильно введен номер дня");
+                        break;
+                }
+
+                switch (monthNum)
+                {
+                    case 1:
+                        month = "января";
+                        break;
+
+                    case 2:
+                        month = "февраля";
+                        break;
+
+                    case 3:
+                        month = "марта";
+                        break;
+
+                    case 4:
+                        month = "апреля";
+                        break;
+
+                    case 5:
+                        month = "мая";
+                        break;
+
+                    case 6:
+                        month = "июня";
+                        break;
+
+                    case 7:
+                        month = "июля";
+                        break;
+
+                    case 8:
+                        month = "августа";
+                        break;
+
+                    case 9:
+                        month = "сентября";
+                        break;
+
+                    case 10:
+                        month = "октября";
+                        break;
+
+                    case 11:
+                        month = "ноября";
+                        break;
+
+                    case 12:
+                        month = "декабря";
+                        break;
+
+                    default: Console.Write("Неправильно введен номер месяца");
+                        break;
+                }
+            }
+
+            Console.Write(day + " " + month);
+        }
+    }
+}

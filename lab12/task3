@@ -1,0 +1,139 @@
+using System;
+
+namespace task3
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int N;
+            {
+                Console.Write("Введите число ");
+                N = Convert.ToInt32(Console.ReadLine());
+            }
+
+            string words = "",
+                   num1 = "",
+                   num2 = "";
+
+            bool condition1 = N / 10 == 1,
+                 condition2 = N % 10 == 0,
+                 condition = condition1 || condition2;
+
+
+            if (condition1)
+            {
+                switch (N)
+                {
+                    case 10:
+                        num1 = "десять";
+                        break;
+                    case 11:
+                        num1 = "одиннадцать";
+                        break;
+                    case 12:
+                        num1 = "двенадцать";
+                        break;
+                    case 13:
+                        num1 = "тринадцать";
+                        break;
+                    case 14:
+                        num1 = "четырнадцать";
+                        break;
+                    case 15:
+                        num1 = "пятнадцать";
+                        break;
+                    case 16:
+                        num1 = "шестнадцать";
+                        break;
+                    case 17:
+                        num1 = "семнадцать";
+                        break;
+                    case 18:
+                        num1 = "восемнадцать";
+                        break;
+                    case 19:
+                        num1 = "девятнадцать";
+                        break;
+                }
+                words = "учебных заданий";
+            }
+            else
+            {
+                switch (N / 10)
+                {
+                    case 2:
+                        num1 = "двадцать";
+                        break;
+                    case 3:
+                        num1 = "тридцать";
+                        break;
+                    case 4:
+                        num1 = "сорок";
+                        break;
+                }
+
+                switch (N % 10)
+                {
+                    case 1:
+                        num2 = "одно";
+                        break;
+                    case 2:
+                        num2 = "два";
+                        break;
+                    case 3:
+                        num2 = "три";
+                        break;
+                    case 4:
+                        num2 = "четыре";
+                        break;
+                    case 5:
+                        num2 = "пять";
+                        break;
+                    case 6:
+                        num2 = "шесть";
+                        break;
+                    case 7:
+                        num2 = "семь";
+                        break;
+                    case 8:
+                        num2 = "восемь";
+                        break;
+                    case 9:
+                        num2 = "девять";
+                        break;
+                }
+
+                switch (N % 10)
+                {
+                    case 1:
+                        words = "учебное задание";
+                        break;
+                    case 2:
+                    case 3:
+                    case 4:
+                        words = "учебных задания";
+                        break;
+                    case 5:
+                    case 6:
+                    case 7:
+                    case 8:
+                    case 9:
+                    case 0:
+                        words = "учебных задания";
+                        break;
+
+                }
+            }
+
+            if (condition)
+            {
+                Console.Write($"{num1} {words}");
+            }
+            else
+            {
+                Console.Write($"{num1} {num2} {words}");
+            }
+        }
+    }
+}

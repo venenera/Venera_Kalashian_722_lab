@@ -1,0 +1,167 @@
+using System;
+
+namespace task4
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int N;
+            {
+                Console.Write("Введите число ");
+                N = Convert.ToInt32(Console.ReadLine());
+            }
+
+            string num1 = "",
+                   num2 = "",
+                   num3 = "";
+
+            bool condition1 = (N % 10) / 10 == 1,
+                 condition2 = N % 10 == 0,
+                 condition = condition1 || condition2,
+                 condition3 = N % 100 == 0;
+
+            switch (N / 100)
+            {
+                case 1:
+                    num1 = "сто";
+                    break;
+                case 2:
+                    num1 = "двести";
+                    break;
+                case 3:
+                    num1 = "триста";
+                    break;
+                case 4:
+                    num1 = "четыреста";
+                    break;
+                case 5:
+                    num1 = "пятьсот";
+                    break;
+                case 6:
+                    num1 = "шестьсот";
+                    break;
+                case 7:
+                    num1 = "семьсот";
+                    break;
+                case 8:
+                    num1 = "восемьсот";
+                    break;
+                case 9:
+                    num1 = "девятьсот";
+                    break;
+            }
+            if (condition1)
+            {
+                switch (N % 100)
+                {
+                    case 10:
+                        num2 = "десять";
+                        break;
+                    case 11:
+                        num2 = "одиннадцать";
+                        break;
+                    case 12:
+                        num2 = "двенадцать";
+                        break;
+                    case 13:
+                        num2 = "тринадцать";
+                        break;
+                    case 14:
+                        num2 = "четырнадцать";
+                        break;
+                    case 15:
+                        num2 = "пятнадцать";
+                        break;
+                    case 16:
+                        num2 = "шестнадцать";
+                        break;
+                    case 17:
+                        num2 = "семнадцать";
+                        break;
+                    case 18:
+                        num2 = "восемнадцать";
+                        break;
+                    case 19:
+                        num2 = "девятнадцать";
+                        break;
+                }
+            }
+            else
+            {
+                switch ((N / 10) % 10)
+                {
+                    case 2:
+                        num2 = "двадцать";
+                        break;
+                    case 3:
+                        num2 = "тридцать";
+                        break;
+                    case 4:
+                        num2 = "сорок";
+                        break;
+                    case 5:
+                        num2 = "пятьдесят";
+                        break;
+                    case 6:
+                        num2 = "шестьдесят";
+                        break;
+                    case 7:
+                        num2 = "семьдесят";
+                        break;
+                    case 8:
+                        num2 = "восемьдесят";
+                        break;
+                    case 9:
+                        num2 = "девяносто";
+                        break;
+
+                }
+
+                switch (N % 10)
+                {
+                    case 1:
+                        num3 = "один";
+                        break;
+                    case 2:
+                        num3 = "два";
+                        break;
+                    case 3:
+                        num3 = "три";
+                        break;
+                    case 4:
+                        num3 = "четыре";
+                        break;
+                    case 5:
+                        num3 = "пять";
+                        break;
+                    case 6:
+                        num3 = "шесть";
+                        break;
+                    case 7:
+                        num3 = "семь";
+                        break;
+                    case 8:
+                        num3 = "восемь";
+                        break;
+                    case 9:
+                        num3 = "девять";
+                        break;
+                }
+            }
+
+            if (condition3)
+            {
+                Console.Write(num1);
+            }
+            else if (condition) {
+                Console.Write(num1 + " " + num2);
+            }
+            else
+            {
+                Console.Write(num1 + " " + num2 + " " + num3);
+            }
+        }
+    }
+}
+

@@ -6,7 +6,7 @@ namespace task5
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("");
+            Console.Write("Введите год ");
             string year = Console.ReadLine();
             int N = Convert.ToInt32(year);
 
@@ -74,7 +74,7 @@ namespace task5
                     break;
             }
 
-            Console.Write(year);
+            Console.Write("год " + year);
         }
     }
 }

@@ -1,0 +1,30 @@
+using System;
+
+namespace task5
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            double sum = 1, sign = 1, P = 1;
+            int i;
+            double A, N;
+            {
+                Console.Write("Введите число А = ");
+                A = Convert.ToDouble(Console.ReadLine());
+
+                Console.Write("Введите число N = ");
+                N = Convert.ToDouble(Console.ReadLine());
+            }
+
+            for (i = 1; i <= N; i++)
+            {
+                sign = -sign;
+                P *= A;
+                sum += P * sign;
+            }
+
+            Console.Write(sum);
+        }
+    }
+}

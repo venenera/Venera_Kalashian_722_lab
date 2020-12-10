@@ -1,0 +1,21 @@
+using System;
+
+namespace task1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("Введите стоимость конфет ");
+            double cost = Convert.ToDouble(Console.ReadLine());
+           
+            double i, sum;
+            Console.WriteLine("Стоимость конфет за:");
+            for (i = 1; i <= 10; ++i)
+            {
+                sum = cost * (i/10);
+                Console.WriteLine($"{i/10} кг - {sum}");
+            }
+        }
+    }
+}

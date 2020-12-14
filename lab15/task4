@@ -1,0 +1,58 @@
+using System;
+
+namespace task4
+{
+    class Program
+    {
+        public static int Quarter(int x, int y)
+        {
+            string Q;
+
+            if (x > 0)
+            {
+                if (y > 0)
+                {
+                    Q = "1";
+                }
+                else
+                {
+                    Q = "4";
+                }
+            }
+            else
+            {
+                if (y > 0)
+                {
+                    Q = "2";
+                }
+                else
+                {
+                    Q = "3";
+                }
+            }
+
+            Console.WriteLine(Q + " четверть");
+            Console.WriteLine();
+
+            return 0;
+        }
+
+        static void Main(string[] args)
+        {
+            int i, x, y;
+
+            for (i = 1; i <= 3; i++)
+            {
+                Console.WriteLine($"{i}:");
+
+                Console.Write("Введите координату x = ");
+                x = Convert.ToInt32(Console.ReadLine());
+
+                Console.Write("Введите координату у = ");
+                y = Convert.ToInt32(Console.ReadLine());
+
+                Quarter(x, y);
+            }
+        }
+    }
+}

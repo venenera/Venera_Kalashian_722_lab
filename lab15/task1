@@ -1,0 +1,29 @@
+using System;
+
+namespace task1
+{
+    class Program
+    {
+        public static double PowerA3(double A, double B)
+        {
+            B = Math.Pow(A, 3);
+            Console.WriteLine($"{A} в третьей степени равно {B}");
+            return B;
+        }
+
+        static void Main(string[] args)
+        {
+            int i;
+            double A, B = 0;
+
+            for (i = 1; i <= 5; i++)
+            {
+                Console.WriteLine($"{i}:");
+                Console.Write("Введите число А = ");
+                A = Convert.ToDouble(Console.ReadLine());
+                PowerA3(A,B);
+            }
+        }
+    }
+}
+

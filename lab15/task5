@@ -1,0 +1,38 @@
+using System;
+
+namespace task5
+{
+    class Program
+    {
+        public static double Fact2(double N)
+        {
+            int i, N1 = 1;
+
+            if (N % 2 != 0)
+            {
+                for (i = 1; i <= N; i += 2)
+                {
+                    N1 *= i;
+                }
+            }
+            else
+            {
+                for (i = 2; i <= N; i += 2)
+                {
+                    N1 *= i;
+                }
+            }
+            Console.WriteLine(N1);
+
+            return 0;
+        }
+
+        static void Main(string[] args)
+        {
+            Console.Write("Введите число N = ");
+            double N = Convert.ToDouble(Console.ReadLine());
+
+            Fact2(N);
+        }
+    }
+}

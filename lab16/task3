@@ -1,0 +1,37 @@
+using System;
+
+namespace task3
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int N, A, B;
+            {
+                Console.Write("Введите размер массива N = ");
+                N = Convert.ToInt32(Console.ReadLine());
+
+                Console.Write("Введите первый элемент массива A = ");
+                A = Convert.ToInt32(Console.ReadLine());
+
+                Console.Write("Введите второй элемент массива B = ");
+                B = Convert.ToInt32(Console.ReadLine());
+            }
+
+            int[] array = new int[N];
+
+            int i;
+
+            array[0] = A;
+            array[1] = B;
+            array[2] = A + B;
+
+            for (i = 3; i < N; i++)
+                array[i] = 2 * array[i - 1];
+
+            for (i = 0; i < N; i++)
+                Console.Write(array[i] + " ");
+
+        }
+    }
+}

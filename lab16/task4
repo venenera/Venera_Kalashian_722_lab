@@ -1,0 +1,29 @@
+using System;
+
+namespace task4
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("Введите размер массива N = ");
+            int N = Convert.ToInt32(Console.ReadLine());
+
+            int i;
+
+            int[] A = new int[N];
+
+            for (i = 0; i < A.Length; i++)
+            {
+                Console.Write($"a[{i}]\t");
+                A[i] = Convert.ToInt32(Console.ReadLine());
+            }
+
+            for (i = 0; i < N / 2; i++)
+                Console.Write(A[i] + " " + A[N - i - 1] + " ");
+
+            if (N % 2 != 0)
+                Console.Write(A[N / 2]);
+        }
+    }
+}

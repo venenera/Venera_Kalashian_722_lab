@@ -1,0 +1,26 @@
+using System;
+
+namespace task1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("Введите число N = ");
+            int N = Convert.ToInt32(Console.ReadLine());
+
+            int[] array = new int[N];
+
+            int i, M = 1;
+
+            for (i = 0; i < N; i++)
+            {
+                array[i] = M;
+                M += 2;
+            }
+
+            for (i = 0; i < N; i++)
+                Console.Write(array[i] + " ");
+        }
+    }
+}

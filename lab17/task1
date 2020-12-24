@@ -1,0 +1,50 @@
+using System;
+
+namespace task1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Введите числа (1 ≤ K ≤ L ≤ N)");
+
+            int N, K, L;
+            {
+                Console.Write("N = ");
+                N = Convert.ToInt32(Console.ReadLine());
+
+                Console.Write("K = ");
+                K = Convert.ToInt32(Console.ReadLine());
+
+                Console.Write("L = ");
+                L = Convert.ToInt32(Console.ReadLine());
+            }
+
+            Console.WriteLine();
+
+            int[] array = new int[N];
+
+            decimal sum = 0, average;
+            int i;
+
+            Console.WriteLine("Введите значения массива:");
+
+            for (i = 0; i < N; i++)
+            {
+                Console.Write($"a[{i}] = ");
+                array[i] = Convert.ToInt32(Console.ReadLine());
+            }
+
+            Console.WriteLine();
+
+            for (i = K; i <= L; i++)
+            {
+                sum += array[i];
+            }
+
+            average = sum / (L - K + 1);
+
+            Console.Write($"Cреднее арифметическое элементов массива с номерами от {K} до {L} равно {average}");
+        }
+    }
+}

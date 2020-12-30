@@ -1,0 +1,50 @@
+using System;
+
+namespace task1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("Введите длину массива N = ");
+            int N = Convert.ToInt32(Console.ReadLine());
+
+            int[] A = new int[N], B = new int [N];
+
+            int i;
+
+            Console.WriteLine("Введите значения массива A:");
+            for (i = 0; i < N; i++)
+            {
+                Console.Write($"a[{i}] = ");
+                A[i] = Convert.ToInt32(Console.ReadLine());
+            }
+
+            Console.WriteLine("Введите значения массива B:");
+            for (i = 0; i < N; i++)
+            {
+                Console.Write($"b[{i}] = ");
+                B[i] = Convert.ToInt32(Console.ReadLine());
+            }
+
+            int buf;
+
+            for (i = 0; i < N; i++)
+            {
+                buf = A[i];
+                A[i] = B[i];
+                B[i] = buf;
+            }
+
+            Console.WriteLine("Изменённый массив A:");
+            for (i = 0; i < N; i++)
+                Console.Write($"{A[i]} ");
+
+            Console.WriteLine();
+
+            Console.WriteLine("Изменённый массив B:");
+            for (i = 0; i < N; i++)
+                    Console.Write($"{B[i]} ");
+        }
+    }
+}

@@ -1,0 +1,35 @@
+using System;
+
+namespace task2
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("Введите длину массива N = ");
+            int N = Convert.ToInt32(Console.ReadLine());
+
+            int[] A = new int[N+1];
+
+            int i;
+
+            Console.WriteLine("Введите значения массива A:");
+            for (i = 1; i <= N; i++)
+            {
+                Console.Write($"a[{i}] = ");
+                A[i] = Convert.ToInt32(Console.ReadLine());
+            }
+
+            int[] B = new int[N+1];
+            int S = 0;
+
+            Console.WriteLine("Сформированный массив В:");
+            for (int K = 1; K <= N; K++)
+            {
+                S += A[K];
+                B[K] = S / K;
+                Console.Write($"{B[K]} ");
+            }
+        }
+    }
+}

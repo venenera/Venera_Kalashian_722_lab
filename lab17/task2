@@ -1,0 +1,40 @@
+using System;
+
+namespace task2
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("Введите число N = ");
+            int N = Convert.ToInt32(Console.ReadLine());
+
+            int[] array = new int[N];
+
+            int i;
+
+            Console.WriteLine("Введите значения массива:");
+            for (i = 0; i < N; i++)
+            {
+                Console.Write($"a[{i}] = ");
+                array[i] = Convert.ToInt32(Console.ReadLine());
+            }
+
+            Console.WriteLine();
+
+            int d = array[1] - array[0];
+
+            for (i = 2; i < N; i++)
+            {
+                if (array[i] - array[i - 1] != d)
+                    d = 0;
+            }
+
+            if (d != 0)
+                Console.Write("Элементы массива образуют арифметическую прогрессию с разностью ");
+
+            Console.Write(d);
+        }
+    }
+}
+

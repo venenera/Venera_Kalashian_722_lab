@@ -1,0 +1,36 @@
+using System;
+
+namespace task3
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("Введите число N = ");
+            int N = Convert.ToInt32(Console.ReadLine());
+
+            int[] array = new int[N];
+
+            int i;
+
+            Console.WriteLine("Введите значения массива:");
+            for (i = 0; i < N; i++)
+            {
+                Console.Write($"a[{i}] = ");
+                array[i] = Convert.ToInt32(Console.ReadLine());
+            }
+
+            Console.WriteLine();
+
+            int min = array[2];
+
+            for (i = 4; i < N; i += 2)
+            {
+                if (array[i] < min)
+                    min = array[i];
+            }
+
+            Console.Write($"Минимальный элемент с четным номером равен {min}");
+        }
+    }
+}

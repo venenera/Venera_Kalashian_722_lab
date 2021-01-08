@@ -1,0 +1,43 @@
+using System;
+
+namespace task5
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("Введите число N = ");
+            int N = Convert.ToInt32(Console.ReadLine());
+
+            int[] array = new int[N];
+
+            int i;
+
+            Console.WriteLine("Введите значения массива:");
+            for (i = 0; i < N; i++)
+            {
+                Console.Write($"a[{i}] = ");
+                array[i] = Convert.ToInt32(Console.ReadLine());
+            }
+
+            int j, same1 = 0, same2 = 0;
+
+            for (i = 0; i < N - 1; i++)
+            {
+                for (j = 0; j < N; j++)
+                {
+                    if (array[i] == array[j] && i != j)
+                    {
+                        same1 = i;
+                        same2 = j;
+                    }
+                }
+            }
+
+            if (same1 < same2)
+                Console.Write($"Номера одинаковых элементов - {same1} и {same2}");
+            else
+                Console.Write($"Номера одинаковых элементов - {same2} и {same1}");
+        }
+    }
+}

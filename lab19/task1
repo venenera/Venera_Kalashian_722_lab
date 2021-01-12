@@ -1,0 +1,39 @@
+using System;
+
+namespace task1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("Введите размер массива N = ");
+            int N = Convert.ToInt32(Console.ReadLine());
+
+            int[] array1 = new int[N];
+
+            int i;
+
+            for (i = 0; i < N; i++)
+            {
+                Console.Write($"a[{i}] = ");
+                array1[i] = Convert.ToInt32(Console.ReadLine());
+            }
+
+            int j = 0;
+
+            for (i = 1; i < N; i++)
+            {
+                if (array1[j] != array1[i])
+                {
+                    j++;
+                    array1[j] = array1[i];
+                }
+            }
+
+            j++;
+
+            for (i = 0; i < j; i++)
+                Console.Write(array1[i] + " ");
+        }
+    }
+}

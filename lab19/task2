@@ -1,0 +1,51 @@
+using System;
+
+namespace ConsoleApp
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("Введите размер массива N = ");
+            int N = Convert.ToInt32(Console.ReadLine());
+
+            int[] A = new int[N];
+
+            int i;
+
+            for (i = 0; i < N; i++)
+            {
+                Console.Write($"a[{i}] = ");
+                A[i] = Convert.ToInt32(Console.ReadLine());
+            }
+
+            int j, ind2, num, A_i;
+
+            for (i = 0; i < N; i++)
+            {
+                num = 0;
+                for (ind2 = 0; ind2 < N; ind2++)
+                    if (A[i] == A[ind2])
+                        num++;
+
+                if (num == 2)
+                {
+                    j = i - 1;
+                    A_i = A[i];
+                    for (ind2 = i; ind2 < N; ind2++)
+                        if (A[ind2] != A_i)
+                        {
+                            j++;
+                            A[j] = A[ind2];
+                        }
+                    N = j + 1;
+                    i--;
+                }
+            }
+
+            Console.WriteLine("Длина массива - " + N);
+            for (i = 0; i < N; i++)
+                Console.Write(A[i] + " ");
+        }
+    }
+}
